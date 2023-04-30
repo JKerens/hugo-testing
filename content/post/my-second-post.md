@@ -1,8 +1,8 @@
 ---
 author: "James Kerens"
-title: "Azure Bicep Basics" # Title of the blog post.
-date: 2023-04-21T16:25:59-05:00 # Date of post creation.
-description: "A basic intro into using Azure Bicep for infrastructure as code!" # Description used for search engine.
+title: "Azure PowerShell Intro" # Title of the blog post.
+date: 2023-04-30T14:32:13-05:00 # Date of post creation.
+description: "Another Example Placeholder" # Description used for search engine.
 featured: true # Sets if post is a featured post, making appear on the home page side bar.
 draft: false # Sets whether to render this page. Draft of true will not be rendered.
 toc: false # Controls if a table of contents should be generated for first-level links automatically.
@@ -17,14 +17,14 @@ codeMaxLines: 10 # Override global value for how many lines within a code block 
 codeLineNumbers: false # Override global value for showing of line numbers within code block.
 figurePositionShow: true # Override global value for showing the figure label.
 categories:
-  - Tutorial
+  - Tricks
 tags:
   - Azure
-  - Bicep
+  - PowerShell
 # comment: false # Disable comment if false.
 ---
 
-# Azure Bicep Basics
+# Azure PowerShell Basics
 
 {{% notice tip "Complex Notices are Possible!" %}}
 This is a notice that has a lot of various kinds of content in it.  
@@ -33,9 +33,43 @@ This is a notice that has a lot of various kinds of content in it.
 * With more than one bullet
   * And even more than one level
 
-```bicep
-@secure()
-param test string
+```PowerShell
+function WithRetry {
+    param (
+        [Parameter(Mandatory = $true, ValueFromPipeline = $true)]
+        [ValidateNotNull()]
+        [ScriptBlock] $Command,
+
+        [Parameter(Mandatory = $false)]
+        [int]$RetryCount = 3
+    )
+    Write-Host "Retry Injection Scope"  
+    $i = 0
+    do {
+        try {
+            return Invoke-Command $Command
+        }
+        catch {
+            Write-Host "Retry #$((++$i))" -fore Red
+        }
+    } until ($i -ge $RetryCount)
+}
+
+function Invoke-FlakyCommand {
+    param (
+        [Parameter(Mandatory = $true, ValueFromPipeline = $true)]
+        [int]$Number
+    )
+    # Retries the command on transient errors.
+    WithRetry {
+        if (Get-Random -InputObject $true, $false) {
+            throw "Oooops"
+        }
+        return $Number
+    }
+}
+
+(1..5) | ForEach-Object { $_ | Invoke-FlakyCommand }
 ```
 
 {{% /notice %}}
