@@ -95,11 +95,11 @@ function initializeSearch(index) {
         return resultItem ;
       })
 
-      if(scope) {
-        rawResults = rawResults.filter(resultItem => {
-          return resultItem.section == scope;
-        });
-      }
+      // if(scope) {
+      //   rawResults = rawResults.filter(resultItem => {
+      //     return resultItem.section == scope;
+      //   });
+      // }
 
       passive ? searchResults(rawResults, searchTerm, true) : searchResults(rawResults, searchTerm);
 
