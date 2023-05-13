@@ -1,8 +1,8 @@
 [en]
-  title = "Clarity"
+  title = "James' Azure Blog"
   LanguageName = "English"
   weight = 1
-
+  
 [pt]
   title = "Claridade" # just for the sake of showing this is possible
   LanguageName = "Português"
