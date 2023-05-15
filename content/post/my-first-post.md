@@ -4,7 +4,7 @@ title: "Azure Bicep Basics" # Title of the blog post.
 date: 2023-04-21T16:25:59-05:00 # Date of post creation.
 description: "A basic intro into using Azure Bicep for infrastructure as code!" # Description used for search engine.
 featured: true # Sets if post is a featured post, making appear on the home page side bar.
-draft: false # Sets whether to render this page. Draft of true will not be rendered.
+draft: true # Sets whether to render this page. Draft of true will not be rendered.
 toc: false # Controls if a table of contents should be generated for first-level links automatically.
 # menu: main
 usePageBundles: false # Set to true to group assets like images in the same folder as this post.

@@ -4,7 +4,7 @@ title: "Azure PowerShell Intro" # Title of the blog post.
 date: 2023-04-30T14:32:13-05:00 # Date of post creation.
 description: "Another Example Placeholder" # Description used for search engine.
 featured: true # Sets if post is a featured post, making appear on the home page side bar.
-draft: false # Sets whether to render this page. Draft of true will not be rendered.
+draft: true # Sets whether to render this page. Draft of true will not be rendered.
 toc: false # Controls if a table of contents should be generated for first-level links automatically.
 # menu: main
 usePageBundles: false # Set to true to group assets like images in the same folder as this post.

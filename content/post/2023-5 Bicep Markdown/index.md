@@ -7,7 +7,8 @@ aliases:
   - azure-bicep-markdown
 author: 'James Kerens'
 usePageBundles: true
-draft: true
+draft: false
+toc: true
 # Top image on post.
 # featureImageAlt: 'Description of image' # Alternative text for featured image.
 # featureImageCap: 'This is the featured image.' # Caption (optional).
@@ -21,7 +22,7 @@ tags:
   - Azure
 ---
 
-Until recently I was only authoring Azure Bicep files in my own projects or shared projects with a few close knit people. But once you start publishing modules to things like Azure Container Registry (ACR), you might want to start considering a more verbose description. Here's a few basic examples to "flex your biceps".
+Until recently I was only authoring `Azure Bicep` files in my own projects or shared projects with a few close knit people. But once you start publishing modules to things like `Azure Container Registry (ACR)`, you might want to start considering a more verbose description. Here's a few basic examples to `flex your biceps`.
 
 ## Prerequisites
 
@@ -61,4 +62,35 @@ src
 └── deploy.bicep
 ```
 
-Full code example - [here](/src)
+## Solution
+
+Now add some example code into the `example.bicep` file with a description tag using markdown format.
+
+{{% notice info "Info" %}}
+The second bullet is indented intentionally to demonstrate nested bullets
+{{% /notice %}}
+
+```bicep
+@description('''The resource\'s name
+- Helpful bullets using markdown 
+  - Makes for less guess work''')
+param name string
+/*
+  ...deployment code
+*/
+```
+
+Now update the `deploy.bicep` file to reference the module we just created in the previous step.
+
+```bicep
+module markdownExample 'modules/example.bicep' = {
+  name: 'example'
+  params: {
+    name: 'Hover over "name:" to the left of this string to see the markdown"'
+  }
+}
+```
+
+If everything worked then when you hover over the `name:` property in `deploy.bicep` file then it should display something like this.
+
+![bicep-param-description](images/formatted-description.png "formatted description example")
