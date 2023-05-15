@@ -1,7 +1,7 @@
 ---
 title: 'Using Markdown Syntax in your Bicep Modules'
 description: 'Using Markdown Syntax in your Bicep Modules'
-summary: "Until recently I was only authoring Azure Bicep files in my own projects or shared projects with a few close knit people. But once you start publishing modules to things like `Azure Container Registry (ACR)`, you might want to start considering a more verbose description. Here's a few basic examples to `flex your biceps`."
+summary: "Until recently I was only authoring `Azure Bicep` files in my own projects or shared projects with a few close knit people. But once you start publishing modules to things like `Azure Container Registry (ACR)`, you might want to start considering a more verbose description. Here's a few basic examples to `flex your biceps`."
 date: '2023-05-13'
 aliases:
   - azure-bicep-markdown
@@ -94,3 +94,5 @@ module markdownExample 'modules/example.bicep' = {
 If everything worked then when you hover over the `name:` property in `deploy.bicep` file then it should display something like this.
 
 ![bicep-param-description](images/formatted-description.png "formatted description example")
+
+- [Full Code Example](https://github.com/JKerens/hugo-testing/tree/main/content/post/2023-5%20Bicep%20Markdown/src/deploy.bicep)
