@@ -1,5 +1,5 @@
 ---
-title: "2023 5 Bicep Resource Type Outputs" # Title of the blog post.
+title: "Azure Bicep Resource Output Types" # Title of the blog post.
 date: 2023-05-15T16:14:27-05:00 # Date of post creation.
 description: "Article description." # Description used for search engine.
 featured: false # Sets if post is a featured post, making appear on the home page side bar.
