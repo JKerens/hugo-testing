@@ -47,7 +47,7 @@ New-Item "src/deploy.bicep" -ItemType File
 New-Item "src/modules" -ItemType Directory
 ```
 
-Then lastly create a file in our modules folder for us to add the markdown syntax description for this demo
+Then lastly, create a file in our modules folder for us to add the markdown syntax description for this demo
 
 ```powershell
 New-Item "src/modules/example.bicep" -ItemType File
