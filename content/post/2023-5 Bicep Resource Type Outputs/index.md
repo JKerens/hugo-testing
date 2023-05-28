@@ -13,10 +13,6 @@ tags:
   - Azure
 ---
 
-```text
-Work in progress
-```
-
 When using Azure [Bicep Modules][bicep-modules], I have always found it suboptimal to return the bits and pieces of a newly created resource back to the main deployment bicep file. Wouldn't it be great if you could just return a strongly typed object of the resource? We already have features like the [existing][bicep-existing-keyword] keyword so why not a resource return type? Well there currently is an experimental feature that does just that! And we will be going through it in this post.
 
 ## Prerequisites
@@ -93,6 +89,7 @@ Now let's fill out the `storage.bicep` file to return the newly created storage 
 
 {{% notice tip "TIP" %}}
 If the word "resource" isn't recognized, double-check the bicepconfig.json is filled out correctly and your bicep installation is on the newest version. If all that fails, it could be that the experimental feature had a breaking change since this post was made.
+
 - [Feature Proposal](https://github.com/azure/bicep/issues/2245)
 {{% /notice %}}
 
