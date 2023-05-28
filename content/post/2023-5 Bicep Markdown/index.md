@@ -95,4 +95,4 @@ If everything worked then when you hover over the `name:` property in `deploy.bi
 
 ![bicep-param-description](images/formatted-description.png "formatted description example")
 
-- [Full Code Example](https://github.com/JKerens/hugo-testing/tree/main/content/post/2023-5%20Bicep%20Markdown/src/deploy.bicep)
+- [Full Code Example](https://github.com/JKerens/tech-blog/tree/main/content/post/2023-5%20Bicep%20Markdown/src/deploy.bicep)
