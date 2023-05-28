@@ -2,7 +2,7 @@
 title: 'Using Markdown Syntax in your Bicep Modules'
 description: 'Using Markdown Syntax in your Bicep Modules'
 summary: "Until recently I was only authoring `Azure Bicep` files in my own projects or shared projects with a few close knit people. But once you start publishing modules to things like `Azure Container Registry (ACR)`, you might want to start considering a more verbose description. Here's a few basic examples to `flex your biceps`."
-date: '2023-05-13'
+date: '2023-05-28'
 aliases:
   - azure-bicep-markdown
 author: 'James Kerens'

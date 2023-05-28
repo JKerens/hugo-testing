@@ -1,6 +1,6 @@
 ---
 title: "Azure Bicep Resource Output Types" # Title of the blog post.
-date: '2023-05-19' # Date of post creation.
+date: '2023-05-28' # Date of post creation.
 description: 'Experimental Azure Bicep feature for resource output types'
 summary: "When using `Azure Bicep Modules`, I have always found it suboptimal to return the bits and pieces of a newly created resource back to the main deployment bicep file. Wouldn't it be great if you could just return a strongly typed object of the resource? We already have features like the `existing` keyword so why not a resource return type? Well there currently is an experimental feature that does just that! And we will be going through it in this post"
 draft: false 
