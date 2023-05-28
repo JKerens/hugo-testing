@@ -26,11 +26,11 @@ Until recently I was only authoring `Azure Bicep` files in my own projects or sh
 
 ## Prerequisites
 
-- VS Code
-  - Azure Bicep Extension
-- Azure Bicep
-  - Understand Azure Bicep basics
-  - Understand Bicep module basics
+- [VS Code][vs-code-download]
+  - [Azure Bicep Extension][vs-code-bicep-ext]
+- [Azure Bicep][azure-bicep-overview]
+  - [Understand Azure Bicep basics][azure-bicep-basics]
+  - [Understand Bicep module basics][azure-bicep-modules]
 
 ## Setup
 
@@ -96,3 +96,13 @@ If everything worked then when you hover over the `name:` property in `deploy.bi
 ![bicep-param-description](images/formatted-description.png "formatted description example")
 
 - [Full Code Example](https://github.com/JKerens/tech-blog/tree/main/content/post/2023-5%20Bicep%20Markdown/src/deploy.bicep)
+
+## Summary
+
+This feature takes readability and communication from author to consumer up to the next level. I'm excited to add this into all of my ACR hosted modules. Or even just multi-developer projects. Good or bad, let me know you thoughts on one of my social media links or give me feedback on what else you would like to see. Thank you for joining me and happy tinkering!
+
+[vs-code-download]: https://code.visualstudio.com/download
+[vs-code-bicep-ext]: https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-bicep
+[azure-bicep-overview]: https://learn.microsoft.com/azure/azure-resource-manager/bicep/overview?tabs=bicep
+[azure-bicep-basics]: https://learn.microsoft.com/azure/azure-resource-manager/bicep/file
+[azure-bicep-modules]: https://learn.microsoft.com/azure/azure-resource-manager/bicep/modules
