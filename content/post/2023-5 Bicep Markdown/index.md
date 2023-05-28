@@ -12,8 +12,8 @@ toc: true
 # Top image on post.
 # featureImageAlt: 'Description of image' # Alternative text for featured image.
 # featureImageCap: 'This is the featured image.' # Caption (optional).
-# thumbnail: 'thumbnail.jpg' # Image in lists of posts.
-# shareImage: 'share.jpg' # For SEO and social media snippets.
+# thumbnail: 'images/formatted-description.png' # Image in lists of posts.
+shareImage: 'images/formatted-description.png' # For SEO and social media snippets.
 
 categories:
   - 'How To'
